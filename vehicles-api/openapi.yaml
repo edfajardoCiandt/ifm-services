@@ -19,6 +19,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Vehicle'
+    post:
+      summary: Create a new vehicle
+      operationId: createVehicle
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleInput'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
 
   /{id}:
     get:
@@ -74,24 +90,6 @@ paths:
           description: Deleted
         '404':
           description: Not found
-
-  /:
-    post:
-      summary: Create a new vehicle
-      operationId: createVehicle
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/VehicleInput'
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Vehicle'
 
 components:
   schemas:
