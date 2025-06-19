@@ -4,6 +4,8 @@ kind: Component
 metadata:
   name: vehicles-service
   description: AWS Lambda mock service for managing vehicles (Infomedia POC)
+  annotations:
+    backstage.io/techdocs-ref: dir:../vehicles-api
   tags:
     - lambda
     - service
@@ -38,6 +40,8 @@ kind: Component
 metadata:
   name: users-service
   description: AWS Lambda mock service for managing users (Infomedia POC)
+  annotations:
+    backstage.io/techdocs-ref: dir:../users-api
   tags:
     - lambda
     - service
