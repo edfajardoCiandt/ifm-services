@@ -36,7 +36,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Vehicle'
 
-  /vehicles/{id}:
+  /{id}:
     get:
       summary: Get a vehicle by ID
       operationId: getVehicleById
