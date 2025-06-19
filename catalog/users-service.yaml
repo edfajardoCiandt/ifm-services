@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: users-service
+  description: AWS Lambda mock service for managing users (Infomedia POC)
+  tags:
+    - lambda
+    - service
+    - users
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-infomedia
+  providesApis:
+    - users-service-api

@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vehicles-service
+  description: AWS Lambda mock service for managing vehicles (Infomedia POC)
+  tags:
+    - lambda
+    - service
+    - vehicles
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-infomedia
+  providesApis:
+    - vehicles-service-api

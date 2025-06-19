@@ -1,45 +1,45 @@
 openapi: 3.0.0
 info:
-  title: Vehicle Service API
+  title: User Service API
   version: 1.0.0
-  description: Mock AWS Lambda CRUD API for managing vehicles at Infomedia.
+  description: Mock AWS Lambda CRUD API for managing users at Infomedia.
 servers:
   - url: https://your-api-id.execute-api.us-east-1.amazonaws.com
 paths:
-  /vehicles:
+  /users:
     get:
-      summary: Get all vehicles
-      operationId: getAllVehicles
+      summary: Get all users
+      operationId: getAllUsers
       responses:
         '200':
-          description: List of vehicles
+          description: List of users
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Vehicle'
+                  $ref: '#/components/schemas/User'
     post:
-      summary: Create a new vehicle
-      operationId: createVehicle
+      summary: Create a new user
+      operationId: createUser
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/VehicleInput'
+              $ref: '#/components/schemas/UserInput'
       responses:
         '201':
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehicle'
+                $ref: '#/components/schemas/User'
 
-  /vehicles/{id}:
+  /users/{id}:
     get:
-      summary: Get a vehicle by ID
-      operationId: getVehicleById
+      summary: Get a user by ID
+      operationId: getUserById
       parameters:
         - name: id
           in: path
@@ -51,12 +51,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehicle'
+                $ref: '#/components/schemas/User'
         '404':
-          description: Vehicle not found
+          description: User not found
     put:
-      summary: Update a vehicle by ID
-      operationId: updateVehicle
+      summary: Update a user by ID
+      operationId: updateUser
       parameters:
         - name: id
           in: path
@@ -67,19 +67,19 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/VehicleInput'
+              $ref: '#/components/schemas/UserInput'
       responses:
         '200':
           description: Updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehicle'
+                $ref: '#/components/schemas/User'
         '404':
           description: Not found
     delete:
-      summary: Delete a vehicle by ID
-      operationId: deleteVehicle
+      summary: Delete a user by ID
+      operationId: deleteUser
       parameters:
         - name: id
           in: path
@@ -93,26 +93,26 @@ paths:
 
 components:
   schemas:
-    Vehicle:
+    User:
       type: object
       properties:
         id:
           type: string
-        make:
+        firstName:
           type: string
-        model:
+        lastName:
           type: string
-        year:
-          type: integer
-      required: [id, make, model, year]
+        email:
+          type: string
+      required: [id, firstName, lastName, email]
 
-    VehicleInput:
+    UserInput:
       type: object
       properties:
-        make:
+        firstName:
           type: string
-        model:
+        lastName:
           type: string
-        year:
-          type: integer
-      required: [make, model, year]
+        email:
+          type: string
+      required: [firstName, lastName, email]

@@ -1,0 +1,67 @@
+# Vehicle Service (Component)
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vehicles-service
+  description: AWS Lambda mock service for managing vehicles (Infomedia POC)
+  tags:
+    - lambda
+    - service
+    - vehicles
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-infomedia
+  providesApis:
+    - vehicles-service-api
+---
+# Vehicle API
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: vehicles-service-api
+  description: Mock AWS Lambda CRUD API for managing vehicles (Infomedia POC)
+  tags:
+    - lambda
+    - rest
+    - vehicles
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-infomedia
+  definition:
+    $text: https://raw.githubusercontent.com/edfajardoCiandt/ifm-services/main/vehicles-api/openapi.yaml
+---
+# User Service (Component)
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: users-service
+  description: AWS Lambda mock service for managing users (Infomedia POC)
+  tags:
+    - lambda
+    - service
+    - users
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-infomedia
+  providesApis:
+    - users-service-api
+---
+# User API
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: users-service-api
+  description: Mock AWS Lambda CRUD API for managing users (Infomedia POC)
+  tags:
+    - lambda
+    - rest
+    - users
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-infomedia
+  definition:
+    $text: https://raw.githubusercontent.com/edfajardoCiandt/ifm-services/main/users-api/openapi.yaml
