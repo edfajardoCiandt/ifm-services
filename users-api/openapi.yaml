@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Mock AWS Lambda CRUD API for managing users at Infomedia.
 servers:
-  - url: https://your-api-id.execute-api.us-east-1.amazonaws.com
+  - url: https://iqtz5jlenb.execute-api.us-east-1.amazonaws.com
 paths:
   /users:
     get:
