@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: vehicle-service-api
+  description: AWS Lambda mock API for managing vehicles (Infomedia POC)
+  tags:
+    - lambda
+    - rest
+    - vehicles
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-infomedia
+  definition:
+    $text: https://raw.githubusercontent.com/edfajardoCiandt/ifm-services/main/vehicle-api/openapi.yaml
