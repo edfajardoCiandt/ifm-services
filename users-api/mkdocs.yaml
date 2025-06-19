@@ -1,0 +1,5 @@
+# filepath: /users-api/mkdocs.yml
+site_name: Users API Docs
+nav:
+  - Home: index.md
+# docs_dir: docs  # This is the default, you can omit or set it explicitly
