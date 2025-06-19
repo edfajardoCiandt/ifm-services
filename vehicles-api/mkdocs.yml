@@ -1,4 +1,4 @@
-# filepath: /users-api/mkdocs.yml
+# filepath: /vehicles-api/mkdocs.yml
 site_name: Vehicles API Docs
 nav:
   - Home: index.md

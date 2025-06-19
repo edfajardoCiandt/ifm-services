@@ -1,21 +1,23 @@
-# Vehicle Service
+# Users Service
 
-This is a mock AWS Lambda CRUD service for managing vehicles in Infomedia's developer portal.
+The **Users Service** is a mock AWS Lambda service that provides CRUD operations for managing user records. This is part of the Infomedia Developer Portal POC.
 
-## Available Endpoints
+## Features
 
-- `GET /`: Get all vehicles
-- `GET /{id}`: Get a specific vehicle
-- `POST /`: Create a new vehicle
-- `PUT /{id}`: Update an existing vehicle
-- `DELETE /{id}`: Delete a vehicle
+- List all users
+- Get a user by ID
+- Create new users
+- Update user data
+- Delete a user
 
-## Sample Vehicle Object
+## Endpoints
 
-```json
-{
-  "id": "1",
-  "make": "Toyota",
-  "model": "Corolla",
-  "year": 2020
-}
+- `GET /users` – Get all users
+- `GET /users/{id}` – Get user by ID
+- `POST /users` – Create a new user
+- `PUT /users/{id}` – Update a user
+- `DELETE /users/{id}` – Remove a user
+
+## OpenAPI Spec
+
+You can find the full OpenAPI specification [here](./openapi.yaml).
