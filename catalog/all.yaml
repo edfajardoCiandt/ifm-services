@@ -6,6 +6,9 @@ metadata:
   description: AWS Lambda mock service for managing vehicles (Infomedia POC)
   annotations:
     backstage.io/techdocs-ref: dir:../vehicles-api
+    infomedia.io/cost-center: CC1234
+    infomedia.io/business-unit: DataOps
+    infomedia.io/billing-code: IFM-VEHICLE-001
   tags:
     - lambda
     - service
