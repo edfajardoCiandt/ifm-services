@@ -14,6 +14,7 @@ spec:
   type: service
   lifecycle: experimental
   owner: team-infomedia
+  system: infohub-platform
   providesApis:
     - vehicles-service-api
 ---
@@ -48,8 +49,9 @@ metadata:
     - users
 spec:
   type: service
-  lifecycle: experimental
+  lifecycle: production
   owner: team-infomedia
+  system: infohub-platform
   providesApis:
     - users-service-api
 ---
